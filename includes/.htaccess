@@ -1,0 +1,12 @@
+<FilesMatch "\.(htaccess|fla|psd|log|sh)$">
+ Order Allow,Deny
+ Deny from all
+</FilesMatch>
+<Files Temp.php>
+  order allow,deny
+  deny from all
+</Files>
+<Files init.php>
+  order allow,deny
+  deny from all
+</Files>

@@ -1,0 +1,45 @@
+/* CSS Document */
+.share_bar {
+	/*
+	background: gold;
+	border: 1px solid #bbb;
+	*/
+	height: 40px;
+	font-family: Arial;
+	font-size: 14px;
+}
+
+.share_icon {
+	width: 40px;
+	height: 40px;
+	margin-right: 5px;
+	cursor: pointer;
+	float: left;
+	cursor: pointer;
+}
+
+.icon_facebook {
+	background: url('../img/share_icons.png') 0 0 no-repeat;
+}
+
+.icon_twitter {
+	background: url('../img/share_icons.png') -40px 0 no-repeat;
+}
+
+.icon_plurk {
+	background: url('../img/share_icons.png') -80px 0 no-repeat;
+}
+
+.icon_delicious {
+	background: url('../img/share_icons.png') -120px 0 no-repeat;
+}
+
+.icon_friendfeed {
+	background: url('../img/share_icons.png') -160px 0 no-repeat;
+}
+
+.icon_myspace {
+	background: url('../img/share_icons.png') -200px 0 no-repeat;
+}
+
+

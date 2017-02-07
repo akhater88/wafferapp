@@ -1,0 +1,22 @@
+[03-May-2011 04:57:19] PHP Fatal error:  Class 'ZipArchive' not found in /home/projects/public_html/umrati/1.7.6/Classes/PHPExcel/Writer/Excel2007.php on line 225
+[03-May-2011 04:57:19] PHP Fatal error:  Class 'ZipArchive' not found in /home/projects/public_html/umrati/1.7.6/Classes/PHPExcel/Writer/Excel2007.php on line 225
+[03-May-2012 14:14:54] PHP Notice:  Undefined variable: objPHPExcel in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 43
+[03-May-2012 14:14:54] PHP Fatal error:  Call to a member function getProperties() on a non-object in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 43
+[03-May-2012 14:15:20] PHP Notice:  Undefined variable: objPHPExcel in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 43
+[03-May-2012 14:15:20] PHP Fatal error:  Call to a member function getProperties() on a non-object in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 43
+[03-May-2012 14:18:04] PHP Notice:  Undefined variable: objPHPExcel in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 43
+[03-May-2012 14:18:04] PHP Fatal error:  Call to a member function getProperties() on a non-object in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 43
+[03-May-2012 14:18:06] PHP Notice:  Undefined variable: objPHPExcel in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 43
+[03-May-2012 14:18:06] PHP Fatal error:  Call to a member function getProperties() on a non-object in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 43
+[03-May-2012 14:19:44] PHP Notice:  Undefined variable: objPHPExcel in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 43
+[03-May-2012 14:19:44] PHP Fatal error:  Call to a member function getProperties() on a non-object in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 43
+[03-May-2012 14:19:47] PHP Notice:  Undefined variable: objPHPExcel in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 43
+[03-May-2012 14:19:47] PHP Fatal error:  Call to a member function getProperties() on a non-object in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 43
+[03-May-2012 16:33:18] PHP Parse error:  syntax error, unexpected T_FOREACH in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 52
+[03-May-2012 14:34:31] PHP Notice:  Undefined variable: _SESSION in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 52
+[03-May-2012 14:34:31] PHP Warning:  Invalid argument supplied for foreach() in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 52
+[03-May-2012 14:34:31] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php:52) in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 74
+[03-May-2012 14:34:31] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php:52) in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 75
+[03-May-2012 14:34:31] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php:52) in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 76
+[03-May-2012 14:35:34] PHP Fatal error:  Call to undefined method PHPExcel::setCellValue() in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 56
+[03-May-2012 16:36:23] PHP Parse error:  syntax error, unexpected T_FOREACH in /home/waffer12/public_html/mypanel/includes/Excel/Tests/export_coupon_to_excel.php on line 53

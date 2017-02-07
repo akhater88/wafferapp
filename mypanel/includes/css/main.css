@@ -1,0 +1,83 @@
+.Close_Div
+	{
+	display: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: #000000;	
+	z-index: 1;
+	}
+.Order_Header
+{
+font-family:"Times New Roman", Times, serif;
+font-size:17px;
+font-weight:bold;
+
+}
+.highlight
+{
+cursor:pointer;
+background-color:#CCDAE3;
+}
+.Order_Item
+{
+margin-right:20px;
+font-family:"Times New Roman", Times, serif;
+font-size:16px;
+
+}
+.Success{
+font-size:15px;
+color:#0033CC;
+}
+.Errors{
+font-size:14px;
+color:#FF0000;
+}
+.Log_In_Box
+{
+  width: 625px;
+ /* height: 300px;
+  background-image: url('../images/log_in_box.png');
+  background-repeat:no-repeat;*/
+}
+.Log_In_Box #Header
+{
+	width: 625px;
+	height:20PX;
+	background-image: url('../images/Log_In_Header_BG.png');
+}
+.Log_In_Box #Log_In_Box_Body  
+{
+	width: 625px;
+	height:180PX;
+	background-image: url('../images/Log_In_Box_Body.png');
+}
+.Log_In_Box #Footer
+{
+	width: 625px;
+	height:20PX;
+	background-image: url('../images/Log_In_Footer_BG.png');
+}
+.Submit_BTN{
+width:80px;
+height:25px;
+background-color:#000066;
+color:#FFFFFF;
+cursor:pointer;
+}
+.Submit_BTN_Add{
+width:80px;
+height:25px;
+background-color:#000066;
+color:#FFFFFF;
+cursor:pointer;
+}
+.Arabic{
+direction:rtl;
+}
+.English{
+direction:ltr;
+}

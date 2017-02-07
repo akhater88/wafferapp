@@ -1,0 +1,201 @@
+﻿/* Codeus-Backend
+www.xulu.net
+Start: 01.01.2006
+Letzte Aenderung: 10.02.2006
+*/
+/* Reset all */
+*{
+	padding: 0;
+	margin: 0;
+}
+
+/* Allgemeines */
+body {
+	line-height: 1.6em;
+	color: #444;
+	background: #c9e3f7 url(../img/admin/login_bg.gif) repeat-x ;
+	background-attachment: fixed;
+	font: 100.1% verdana,arial,tahoma,sans-serif;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+html {
+	line-height: 1.6em;
+	color: #444;
+	background: #c9e3f7 url(../img/admin/login_bg.gif) repeat-x ;
+	background-attachment: fixed;
+	font: 100.1% verdana,arial,tahoma,sans-serif;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+* html .png {
+	behavior: url("css/iepngfix.htc");
+}
+
+* html img {
+	behavior: url("css/iepngfix.htc");
+}
+
+/* Clear Class */
+.c {
+	clear: both;
+	height: 0;
+	line-height: 0;
+}
+
+a img {
+	border: 0;
+}
+
+img {
+	border: 0;
+}
+
+.none {
+	display: none;
+}
+
+/* Absaetze */
+p {
+	margin: 0.7em 0;
+}
+
+/* Kleinerer Text */
+.s {
+	font-size: 0.8em;
+}
+
+#footbar {
+	position: absolute;
+	bottom: 0;
+	left:0;
+	color: #fff;
+	background: #2659BE url(../img/admin/login_footer.gif) repeat-x;
+	width: 100%;
+	font-size: 0.84em;
+	text-align: left;
+}
+
+#footbar a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+#footbar span.left {
+	padding: 16px 20px 12px 20px;
+	float: left;
+}
+
+#footbar span.right {
+	padding: 16px 0 12px 0;
+	text-align: center;
+	width: 205px;
+	margin-right: 20px;
+	float: right;
+	background: url(../img/admin/login_footer_liz.png) no-repeat 0 11px;
+}
+
+#footbar span.right strong {
+	padding-left: 22px;
+	background: url(../img/admin/login_accept.png) no-repeat left center;
+}
+
+#abstand {
+	height: 50%; 
+	width: 100px;
+	margin-bottom: -13.5em; 
+	float: left; 
+}
+
+#login {
+	width: 489px;
+	position: relative;
+	margin: 0 auto;
+	text-align: left;
+	clear: left;
+}
+
+#login form {
+	background: url(../img/admin/login_input_bg.png) no-repeat;
+	height: 268px;
+	padding: 0 20px 0 53px;
+}
+
+#login form span { display: none; }
+
+#username {
+	width: 374px;
+	height: 53px;
+	background: url(../img/admin/login_fields.gif) no-repeat;
+	float: left;
+	margin-top: 21px;
+}
+
+#password {
+	width: 374px;
+	height: 54px;
+	background: url(../img/admin/login_fields.gif) no-repeat 0 -53px;
+	float: left;
+	margin-bottom: 15px;
+}
+
+#login form label input {
+	border: 0;
+	background: transparent;
+	height: 23px;
+	float: right;
+	margin: 14px 20px 0 0;
+	width: 227px;
+	padding-top: 4px;
+	font-size: 0.95em;
+	z-index: 1000;
+}
+
+/*#login form #username:hover,*/
+#username.active {
+	background: url(../img/admin/login_fields.gif) no-repeat 0 -107px;
+}
+
+/*#login form #password:hover,*/
+#password.active {
+	background: url(../img/admin/login_fields.gif) no-repeat 0 -160px;
+}
+
+#login form .button {
+	float: right;
+	margin-right: 54px;
+	background: url(../img/admin/login_button.gif) no-repeat;
+	border: 0;
+	width: 66px;
+	height: 33px;
+	font-size: 0.90em;
+	font-family:Tahoma;
+	font-size:15px;
+}
+
+#ajax_load {
+	background: url(../img/admin/login_ani.gif) no-repeat left center;
+}
+
+#ajax_error {
+	background: url(../img/admin/login_error.gif) no-repeat left center;
+}
+
+#ajax_accept {
+	background: url(../img/admin/login_accept.gif) no-repeat left center;
+}
+
+#login form #messages div {
+	float: left;
+	font-size: 0.8em;
+	color: #fff;
+	padding-left: 20px;
+	margin-left: 17px;
+	margin-top: 7px;
+}
+

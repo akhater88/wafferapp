@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script language="javascript">AC_FL_RunContent = 0;</script>
+<script src="js/AC_RunActiveContent.js" language="javascript"></script>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript">
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+    
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 4000 );
+});
+</script>
+
+<title>:: Home Page ::</title>
+<style type="text/css">
+.style1 {
+border-color: #c0c0c0;
+border-width: 0;
+}
+</style>
+</head>
+<body>
+
+<div id="wrapper">
+<div id="top">
+	<table style="width: 100%" cellpadding="0" cellspacing="0" class="style1">
+	<tr>
+	<td valign="top" style="width:415px;">
+	<div id="text-right">
+			<table style="width: 100%" cellpadding="0" cellspacing="0" class="style1">
+			<tr>
+			<td valign="top" style="width: 106px;">
+			<img alt="" src="images/logo.png" width="85" height="113" /></td>
+			<td valign="top">حمّل برنامج وفّر<span class="orange-font">%</span> مجاناً على هاتفك المحمول.. واستمتع بكوبونات الخصم التي ستصلك يوميا من خلال وفّر<span class="orange-font">%</span>.</td>
+			</tr>
+			</table>
+	</div>
+	
+	<div id="subscribe">
+			<table style="width: 100%" cellpadding="0" cellspacing="0" class="style1">
+			<tr>
+			<td style="width: 223px">هل تفكّر<br />
+			بـ <span class="orange-font">زيادة</span> معدّل مبيعاتك؟</td>
+			<td style="padding-top:53px;">
+			<a onmouseover="document.sub.src='images/sub-on.png'" onmouseout="document.sub.src='images/sub-off.png'" target="_blank" href="http://www.twitter.com/wafferapp">
+			<img name="sub" border="0" src="images/sub-off.png" width="65" height="16"/></a>
+			</td>
+			</tr>
+			</table>
+	</div>
+	
+	</td>
+	<td valign="top" style="width:395px;">
+	<div id="header">
+	<div id="slideshow">
+    <img src="images/image2.jpg" alt="Slideshow Image 2" class="active" />
+    <img src="images/image4.jpg" alt="Slideshow Image 4" />
+    <img src="images/image5.jpg" alt="Slideshow Image 5" />
+	</div>
+	</div>
+	</td>
+	</tr>
+	</table>
+</div>
+
+<div id="middle">
+		<table style="width: 100%" cellpadding="0" cellspacing="0" class="style1">
+		<tr>
+			<td valign="top" style="width: 221px">
+			<div id="text-right-middle">حمل وفّر<span class="orange-font">%</span> مجانا الآن على<br/>
+هاتفك المحمول مهما كان <br/>
+نوعه :)</div>
+			</td>
+			<td valign="top"><map name="FPMap0" id="FPMap0">
+			<area href="#z" target="_blank" shape="circle" coords="293, 89, 33" />
+			<area href="#z" target="_blank" shape="circle" coords="207, 102, 34" />
+			<area href="#z" target="_blank" shape="circle" coords="124, 90, 34" />
+			<area href="#z" target="_blank" shape="circle" coords="37, 103, 33" />
+			</map>
+			<img alt="" src="images/download.png" width="331" height="153" usemap="#FPMap0" border="0" /></td>
+			<td valign="top" style="width: 248px; padding-top:18px;">
+			<img alt="" src="images/mobiles.png" width="248" height="101" /></td>
+		</tr>
+		</table>
+</div>
+
+<div id="bottom">
+
+<div id="twitter">
+<a onmouseover="document.twitter.src='images/twitter-on.png'" onmouseout="document.twitter.src='images/twitter-off.png'" target="_blank" href="http://www.twitter.com/wafferapp">
+<img name="twitter" border="0" src="images/twitter-off.png" width="123" height="57"/></a>
+</div>
+
+<table style="width: 100%" cellpadding="0" cellspacing="0" class="style1">
+	<tr>
+	<td valign="top" align="left" style="width: 254px; padding-top:7px;">
+	<map name="FPMap1" id="FPMap1">
+	<area href="http://www.wafferapp.com/services/display_offer/Member/7/" shape="rect" target="_blank" coords="131, 97, 200, 155" />
+	<area href="http://www.wafferapp.com/services/display_offer/Member/4/" shape="rect" target="_blank" coords="33, 106, 106, 168" />
+	<area href="http://www.wafferapp.com/services/display_offer/Member/6/" shape="rect" target="_blank" coords="144, 176, 213, 238" />
+	<area href="http://www.wafferapp.com/services/display_offer/Member/5/" shape="rect" target="_blank" coords="41, 188, 118, 250" />
+	</map>
+	<img alt="" src="images/services1.png" width="239" height="278" border="0" usemap="#FPMap1" /></td>
+	<td valign="top" align="right" style="padding-top:20px">
+	<map name="FPMap2" id="FPMap2">
+	<area href="http://www.wafferapp.com/store/display_offer/Member/3/" shape="rect" target="_blank" coords="451, 113, 515, 171" />
+	<area href="http://www.wafferapp.com/store/display_offer/Member/8/" shape="rect" target="_blank" coords="370, 105, 434, 164" />
+	<area href="http://www.wafferapp.com/store/display_offer/Member/15/" shape="rect" target="_blank" coords="287, 99, 353, 156" />
+	<area href="http://www.wafferapp.com/store/display_offer/Member/16/" shape="rect" target="_blank" coords="204, 88, 273, 151" />
+	<area href="http://www.wafferapp.com/store/display_offer/Member/11/" shape="rect" target="_blank" coords="121, 81, 186, 139" />
+	<area href="http://www.wafferapp.com/store/display_offer/Member/12/" shape="rect" target="_blank" coords="34, 73, 102, 133" />
+	<area href="http://www.wafferapp.com/store/display_offer/Member/10/" shape="rect" target="_blank" coords="443, 191, 512, 246" />
+	<area href="http://www.wafferapp.com/store/display_offer/Member/9/" shape="rect" target="_blank" coords="360, 181, 430, 242" />
+	<area href="http://www.wafferapp.com/store/display_offer/Member/17/" shape="rect" target="_blank" coords="280, 172, 348, 232" />
+	<area href="http://www.wafferapp.com/store/display_offer/Member/13/" shape="rect" target="_blank" coords="195, 166, 267, 228" />
+	<area href="http://www.wafferapp.com/store/display_offer/Member/18/" shape="rect" target="_blank" coords="114, 155, 179, 216" />
+	<area href="http://www.wafferapp.com/store/display_offer/Member/14/" shape="rect" target="_blank" coords="30, 144, 100, 210" />
+	</map>
+	<img alt="" src="images/services2.png" width="547" height="281" border="0" usemap="#FPMap2" /></td>
+	</tr>
+</table>
+
+</div>
+
+</div>
+
+</body>
+</html>

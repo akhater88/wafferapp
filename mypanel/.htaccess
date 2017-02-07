@@ -1,0 +1,19 @@
+RewriteEngine on
+				RewriteCond %{REQUEST_FILENAME} !-f
+				RewriteCond %{REQUEST_FILENAME} !-d
+				Options All -Indexes
+				RewriteRule ^(.*)$ index.php?rt=$1 [L,QSA]
+				# disable the server signature
+				ServerSignature Off
+				#Remove Etags:
+				FileETag none
+				# deny access to certain files:
+				<FilesMatch "\.(htaccess)$">
+				 Order Allow,Deny
+				 Deny from all
+				</FilesMatch>
+				# <Files *.php>
+					# SetEnv downgrade-1.0
+				# </Files>
+				SetEnv downgrade-1.0
+				
