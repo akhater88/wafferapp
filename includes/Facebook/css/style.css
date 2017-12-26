@@ -1,0 +1,133 @@
+﻿img { behavior: url(iepngfix.htc); }
+
+body
+{
+	font-family:"Tahoma";
+	font-size: 22px;
+	font-weight:normal;
+	text-align:center;
+	margin:0px auto;
+	color:#ffffff;
+}
+
+#wrapper
+{
+	width:810px;
+    height:810px;
+	padding:0px;
+	margin:0px auto;
+	text-align:right;
+	position:relative;
+	direction:rtl;
+	font-family:"Tahoma";
+	font-size: 22px;
+	font-weight:normal;
+	text-align:center;
+	margin:0px auto;
+	color:#ffffff;
+	background-image:url('../images/facebook-design2.jpg');
+	background-repeat:no-repeat;
+	text-shadow: 0.1em 0.1em 0.1em #000614;
+}
+
+#top{
+	width:810px;
+	height:323px;
+}
+
+#header{
+	width:166px;
+	height:243px;
+	background-image:url('../images/header.png');
+	background-repeat:no-repeat;
+	background-position:left top;
+	margin-top:11px;
+	padding-left:135px;
+	padding-right:94px;
+	padding-top:74px;
+}
+
+#text-right{
+	width:401px;
+	height:132px;
+	padding-top:41px;
+	padding-right:14px;
+	text-align:right;
+	font-weight:normal;
+	line-height:30px;
+}
+
+.orange-font{color:#eeb101;}
+
+#subscribe{
+	width:397px;
+	height:89px;
+	text-align:right;
+	line-height:30px;
+	float:right;
+	background-image:url('../images/subscribe-bg.png');
+	background-repeat:no-repeat;
+	padding-top:42px;
+	padding-right:8px;
+}
+
+#middle{
+	width:810px;
+	height:146px;
+	padding-top:30px;
+}
+
+#text-right-middle{
+	width:207px;
+	height:104px;
+	padding-top:39px;
+	padding-right:14px;
+	text-align:right;
+	font-weight:normal;
+	background-image:url('../images/arrow.png');
+	background-repeat:no-repeat;
+	font-size:18px;
+}
+
+#bottom{
+	width:810px;
+	height:300px;
+}
+
+.red-font{color:#b20303; font-weight:bold;}
+
+#twitter{
+	width:123px;
+	height:57px;
+	left: 414px;
+	top: 506px;
+	position:absolute;
+}
+
+
+/*** set the width and height to match your images **/
+
+#slideshow {
+    position:relative;
+    height:243px;
+}
+
+#slideshow IMG {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+    opacity:0.0;
+}
+
+#slideshow IMG.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow IMG.last-active {
+    z-index:9;
+}
+
+
+
