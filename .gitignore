@@ -1,1 +1,9 @@
 /nbproject/private/
+/index.php
+/model/db.class.php
+/mypanel/index.php
+/mypanel/model/db.class.php
+.buildpath
+.project
+cache/
+waffer12_myapp.sql

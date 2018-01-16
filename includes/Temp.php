@@ -228,24 +228,7 @@ $registry->router->loader();
 </div>
 </td>
 <td valign="top" style="width: 288px">
-<div id="download-bg">
-<div class="download-icons">
-<a onmouseover="document.iphone.src='<?php echo __SCRIPT_PATH;?>images/iphone-on.png'" onmouseout="document.iphone.src='<?php echo __SCRIPT_PATH;?>images/iphone-off.png'" href="http://itunes.apple.com/jo/app/waffer/id518659562?mt=8" target="_blank">
-<img name="iphone" border="0" src="<?php echo __SCRIPT_PATH;?>images/iphone-off.png" width="107" height="31"/></a>
-</div>
-<div class="download-icons">
-<a onmouseover="document.android.src='<?php echo __SCRIPT_PATH;?>images/android-on.png'" onmouseout="document.android.src='<?php echo __SCRIPT_PATH;?>images/android-off.png'" href="https://play.google.com/store/apps/details?id=com.Waffer.Waffer&feature=search_result#?t=W251bGwsMSwyLDEsImNvbS5XYWZmZXIuV2FmZmVyIl0" target="_blank">
-<img name="android" border="0" src="<?php echo __SCRIPT_PATH;?>images/android-off.png" width="107" height="31"/></a>
-</div>
-<div class="download-icons">
-<a onmouseover="document.ovi.src='<?php echo __SCRIPT_PATH;?>images/ovi-on.png'" onmouseout="document.ovi.src='<?php echo __SCRIPT_PATH;?>images/ovi-off.png'" href="#z">
-<img name="ovi" border="0" src="<?php echo __SCRIPT_PATH;?>images/ovi-off.png" width="106" height="31"/></a>
-</div>
-<div class="download-icons">
-<a onmouseover="document.blackberry.src='<?php echo __SCRIPT_PATH;?>images/blackberry-on.png'" onmouseout="document.blackberry.src='<?php echo __SCRIPT_PATH;?>images/blackberry-off.png'" href="http://appworld.blackberry.com/webstore/content/107666/?lang=en" target="_blank">
-<img name="blackberry" border="0" src="<?php echo __SCRIPT_PATH;?>images/blackberry-off.png" width="107" height="31"/></a>
-</div>
-</div>
+
 
 <div id="right-menu">
 <div id="menu-title"><img alt="" src="<?php echo __SCRIPT_PATH;?>images/fe2at-waffer.png" width="137" height="36" /></div>
