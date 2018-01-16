@@ -361,18 +361,10 @@ $registry->router->loader();
 			</td>
 
 			<td style="width:230px; padding-left:10px; padding-top:75px" align="left" valign="bottom">
-			<map name="FPMap0" id="FPMap0">
-			<area href="http://www.facebook.com/WafferApp" target="_blank" shape="rect" coords="32, 0, 59, 25" />
-			<area href="#z" shape="rect" target="_blank" coords="2, 2, 30, 28" />
-			</map>
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/socialmedia.png" width="60" height="29" usemap="#FPMap0" border="0" /></td>
-		</tr>
+					</tr>
 	</table>
 	
 <div id="softile">Copyright © 2012 <a href="#z" class="soft">wafferapp.com</a> , All rights reserved.Powered By :
-<a href="http://www.softilesolutions.com/" style="font-size: 11px" target="_blank">
-						Softile Solutions
-					</a>
  </div>
 </div>
 </center>
