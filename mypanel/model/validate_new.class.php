@@ -503,7 +503,7 @@ class validate_new
 			}
 		public function Validate_Email($Value)
 			{
-				 if(eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", $Value))
+				 if(!preg_replace("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", $Value))
 					{
 						return true;
 					}
