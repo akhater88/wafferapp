@@ -261,7 +261,7 @@ switch($Content_Title)
 
 <div class="footer-bg">
 Copyright © 2012 --- All Rights Reserved. <br/>
-Powered By <a href="http://softilesolutions.com" class="soft" target="_blank">Softile Solutions </a>
+Powered By AK
 
 </div>
 
