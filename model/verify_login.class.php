@@ -1,4 +1,3 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
 class verify_login
 	{
@@ -107,7 +106,7 @@ class verify_login
 									<script language="javascript">
 									window.location = '<?php echo $URL;?>';
 									</script>
-									<?
+									<?php
 							}
 						elseif ($user_password != $DB_password)
 							{
@@ -121,7 +120,7 @@ class verify_login
 								<script language="javascript">
 								window.location = '<?php echo __LINK_PATH;?>index/s/';
 								</script>
-								<?
+								<?php
 							}
 					}
 				elseif (!$Is_User)
@@ -136,7 +135,7 @@ class verify_login
 						<script language="javascript">
 						window.location = '<?php echo __LINK_PATH;?>index/s/';
 						</script>
-						<?
+						<?php
 					}
 			}
 		

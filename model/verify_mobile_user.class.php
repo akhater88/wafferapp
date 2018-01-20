@@ -57,7 +57,7 @@ class verify_mobile_user
 									<script language="javascript">
 									window.location = '<?php echo __LINK_PATH;?>mobile_users_functions/show_account/';
 									</script>
-									<?
+									<?php
 									
 									
 							}
@@ -69,7 +69,7 @@ class verify_mobile_user
 								<script language="javascript">
 								window.location = '<?php echo __LINK_PATH;?>index/s/';
 								</script>
-								<?
+								<?php
 							}
 					}
 				else
@@ -80,7 +80,7 @@ class verify_mobile_user
 						<script language="javascript">
 						window.location = '<?php echo __LINK_PATH;?>index/s/';
 						</script>
-						<?
+						<?php
 					}
 			}
 		

@@ -1,4 +1,3 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
 class myfunctions
 	{
@@ -75,10 +74,19 @@ class myfunctions
 						$sql = 'SELECT Image_Path FROM '.$Table.' WHERE Status = ?';
 						$Execute_Array = array('1');
 						$results = $Display->Display_Info($sql,$Execute_Array);
+						$counter = 0;
 						foreach($results as $rows)
 							{
+							    $active = '';
+							    if($counter == 0){
+							        $active = 'active';
+							    }
+							    $counter++;
 							?>
-							<img src="<?php echo __IMAGE_PATH;?>Plain_Image_Gallery/<?php echo $rows->Image_Path;?>" />
+							 <div class="item <?php echo $active?>">
+                                           <img src="<?php echo __IMAGE_PATH;?>Plain_Image_Gallery/<?php echo $rows->Image_Path;?>" />
+                              </div>
+							
 							<?php
 							}
 						$fp = fopen($Cached_File,'w');
