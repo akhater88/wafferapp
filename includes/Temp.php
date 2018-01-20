@@ -9,22 +9,22 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="apple-touch-icon" href="<?php echo __SCRIPT_PATH;?>apple-touch-icon.png">
 
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo __SCRIPT_PATH;?>assets/css/bootstrap.min.css">
         <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
 
 
         <!--For Plugins external css-->
-        <link rel="stylesheet" href="assets/css/plugins.css" />
+        <link rel="stylesheet" href="<?php echo __SCRIPT_PATH;?>assets/css/plugins.css" />
 
         <!--Theme custom css -->
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="<?php echo __SCRIPT_PATH;?>assets/css/style.css">
 
         <!--Theme Responsive css-->
-        <link rel="stylesheet" href="assets/css/responsive.css" />
+        <link rel="stylesheet" href="<?php echo __SCRIPT_PATH;?>assets/css/responsive.css" />
 
-        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="<?php echo __SCRIPT_PATH;?>assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body data-spy="scroll" data-target="#main-navbar">
         <!--[if lt IE 8]>
@@ -756,10 +756,10 @@
         </footer>
 
 
-        <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
-        <script src="assets/js/vendor/bootstrap.min.js"></script>
+        <script src="<?php echo __SCRIPT_PATH;?>assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="<?php echo __SCRIPT_PATH;?>assets/js/vendor/bootstrap.min.js"></script>
 
-        <script src="assets/js/plugins.js"></script>
-        <script src="assets/js/main.js"></script>
+        <script src="<?php echo __SCRIPT_PATH;?>assets/js/plugins.js"></script>
+        <script src="<?php echo __SCRIPT_PATH;?>assets/js/main.js"></script>
     </body>
 </html>
