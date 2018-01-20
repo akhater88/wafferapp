@@ -1,377 +1,765 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-<head>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script language="javascript">AC_FL_RunContent = 0;</script>
-<script src="<?php echo __SCRIPT_PATH;?>js/AC_RunActiveContent.js" language="javascript"></script>
-<script src="<?php echo __SCRIPT_PATH;?>js/MyScript.js" language="javascript"></script>
-<link rel="stylesheet" href="<?php echo __SCRIPT_PATH;?>css/style.css" type="text/css" />
-<link href="<?php echo __SCRIPT_PATH;?>css/login.css" media="screen, projection" rel="stylesheet" type="text/css"/>
 
-<title>:: Home Page ::</title>
-<script language="JavaScript" type="text/javascript">
-		<!--
+        <!--For Plugins external css-->
+        <link rel="stylesheet" href="assets/css/plugins.css" />
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+
+        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body data-spy="scroll" data-target="#main-navbar">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 		
-		  // see http://www.thesitewizard.com/archive/framebreak.shtml
-		  // for an explanation of this script and how to use it on your
-		  // own website
-		  if (top.location != location) {
-			top.location.href = document.location.href ;
-		  }
-		
-		-->
-		</script>
-<script type="text/javascript">
+		<div class='preloader'><div class='loaded'>&nbsp;</div></div>
+        <div id="menubar" class="main-menu">	
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="" /></a>
+                    </div>
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-19037959-3']);
-  _gaq.push(['_trackPageview']);
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#home">Home<span class="sr-only">(current)</span></a></li>
+                            <li><a href="#works-area">Service</a></li>
+                            <li><a href="#our-team">About</a></li>
+                            <li><a href="#our-portfolio">Portfolio</a></li>
+                            <li><a href="#our-history">Academic</a></li>
+                            <li><a href="#our-feature">Blog</a></li>
+                            <li><a href="#">Contact Us</a></li>
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+                            <div class="contact-number text-right"> 
+                                <ul><li class="">(+001122334)</li></ul>
+                            </div>
 
-</script>
-<script type="text/javascript" src="<?php echo __SCRIPT_PATH;?>js/jquery-1.4.2.min.js"></script>
-<link rel="stylesheet" href="<?php echo __SCRIPT_PATH;?>css/nivo-slider.css" type="text/css" media="screen" /> 
-<link rel="stylesheet" href="<?php echo __SCRIPT_PATH;?>css/slide.css" type="text/css" media="screen" />
-<script type="text/javascript">
-        $(document).ready(function() {
-			$('#resend_password_link').click(function(event){
-				$('#pw_recovery').slideDown('slow');
-			
-			});	
-			
-			$('#signin_submit2').click(function(event){
-			var EmailPW = $('#EmailPW').val();
-			var Time_Stamp = event.timeStamp;
-			$.post('<?php echo __LINK_PATH;?>general/pw_recovery/AJAX/Y/',{EmailPW:EmailPW,Time_Stamp:Time_Stamp},function(data){
-				$.getJSON('<?php echo __SCRIPT_PATH;?>json/'+Time_Stamp+'.json',function(json){
-					var Flag = json.flag;
-					if(Flag == '0')
-						{
-							alert('تـم إرســال مـعـلـومـات الـتـسـجـيـل إلـى بـريـدك الإلكـتـرونــي');
-							$('#EmailPW').val('');
-							$('#pw_recovery').slideUp('slow');
-						}
-					else
-						{
-							alert('لـم يـتـم الـعـثـور عـلـى بـريـدك الإلكـتـرونـي الـرجـاء مـراجـعــة إدارة الـمـوقــع');
-							$('#EmailPW').val('');
-							$('#pw_recovery').slideUp('slow');
-						}
-								
-					});
-					
-				});
-			});
-            $(".signin").click(function(e) {          
-				e.preventDefault();
-                $("fieldset#signin_menu").toggle();
-				$(".signin").toggleClass("menu-open");
-				
-            });
-			
-			$("fieldset#signin_menu").mouseup(function() {
-				return false
-			});
-			$(document).mouseup(function(e) {
-				if($(e.target).parent("a.signin").length==0) {
-					$(".signin").removeClass("menu-open");
-					$("fieldset#signin_menu").hide();
-					$('#pw_recovery').hide();
-				}
-			});			
-			
-        
-		});
-</script>
-<meta name="description" content="تمتع بكوبونات الخصم واخر العروض على هاتفك النقال مباشرة,Enjoy discount coupons and other offers directly on your mobile phone " />
-<meta name="keywords" content="تطبيق الهاتف المحمول وفر الاردن والسعودية: وفر,تطبيق موبيل الاردن,تطبيق موبيل السعودية,تطبيق جوال الاردن ,تطبيق جوال السعودية,تطبيق محمول الاردن , تطبيق محمول السعودية ,تطبيقه  هاتف محمول الاردن,تطبيق هاتف محمول السعودية,اعلن معنا,انشر معنا,المنشورات الورقة,البروشور,تطبيق اندرويد مجانا,تطبيق ايفون مجانا,تطبيق بلاك بيري مجانا,تطبيق نوكيا مجانا,تطبيق وفر مجانا  ,خدمات وفر,عروض,وصل حديثا,خصومات,بطاقات خصم, بطاقات خصم مطاعم, بطاقات خصم كوفي شوب , بطاقات خصم نوادي رياضية, بطاقات خصم مركز تسلية, بطاقات خصم مشتريات يومية, بطاقات خصم الكترونيات, بطاقات خصم هدايا والعاب, بطاقات خصم ملابس, بطاقات خصم سياحةوسفر, بطاقات خصم حج وعمرة, بطاقات خصم مفروشات , بطاقات خصم اكسسوارات وتجميل,وصل حديثا, وصل حديثا مطاعم, وصل حديثا كوفي شوب , وصل حديثا نوادي رياضية, وصل حديثا مركز تسلية, وصل حديثا مشتريات يومية, وصل حديثا الكترونيات, وصل حديثا هدايا والعاب, وصل حديثا ملابس, وصل حديثا سياحةوسفر, وصل حديثا حج وعمرة, وصل حديثا مفروشات , وصل حديثا اكسسوارات وتجميل,خصومات, خصومات مطاعم, خصومات كوفي شوب , خصومات نوادي رياضية, خصومات مركز تسلية, خصومات مشتريات يومية, خصومات الكترونيات, خصومات هدايا والعاب, خصومات ملابس, خصومات سياحةوسفر, خصومات حج وعمرة, خصومات مفروشات , خصومات اكسسوارات وتجميل,عروض,عروض مطاعم, عروض كوفي شوب , عروض نوادي رياضية, عروض مركز تسلية, عروض مشتريات يومية, عروض الكترونيات, عروض هدايا والعاب, عروض ملابس, عروض سياحةوسفر, عروض حج وعمرة, عروض مفروشات , عروض اكسسوارات وتجميل, Application of mobile phone fled Jordan and Saudi Arabia: save, apply Mobil Jordan, the application of Mobil Saudi Arabia, the application of Mobile Jordan, Mobile App Arabia, the application of a portable Jordan, the application of a portable Arabia, applied a mobile phone Jordan, the application of a mobile phone Arabia, Advertise, Post us Publications paper, brochure, free Android application, iPhone application for free, free BlackBerry application, the Nokia free of charge, provided the application for free, provided the services, offers, newly arrived, discounts, discount cards, discount cards, restaurants, coffee shop discount cards, discount cards clubs sports, cards, discount entertainment center, debit cards purchases daily, Cards & discount electronics, cards, discount gifts, games, cards, discount clothes, debit cards travel and tours, debit cards Hajj & Umrah, Cards Discount Furniture, debit cards Accessories and Beauty, New Arrivals, Just in restaurants, Just in a coffee shop, newly arrived Sports Clubs, Just in entertainment center, newly arrived purchases daily, newly arrived Electronics, New Arrivals Gifts & Games, New Arrivals Clothing, New Arrivals travel and tours, newly arrived Hajj and Umrah, newly arrived furniture, New Arrivals Accessories and Beauty , discounts, discount restaurants, discount coffee shop, discount sports clubs, discount entertainment center, discount purchases per day, discount electronics, discount gifts, games, discount clothes, discount travel and tours, discounts Hajj and Umrah, discount furniture, discount accessories and beauty, Offers, Offers Restaurants , offers a coffee shop, offers sports clubs, offers entertainment center, offers daily purchases, offers Electronics, Gifts & Games Offers, Offers clothing, travel and tours Offers, Offers pilgrimage and Umrah, offers furniture, accessories and Beauty Offers" />
-</head>
-<body>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+        <!--Home page style-->
+        <header id="home" class="sections">
+            <div class="container">
 
-<div class="body-all">
-<div class="top-jeans">
+                <div class="row">
+                    <div class="homepage-style">
 
-<div id="wrapper">
+                        <div class="top-arrow hidden-xs text-center"><img src="assets/images/top-arrow.png" alt="" /></div>
 
-<div id="logo"><img alt="" src="<?php echo __SCRIPT_PATH;?>images/logo-waffer.png" width="108" height="145" /></div>
-<div id="jeans-top-pic"><img alt="" src="<?php echo __SCRIPT_PATH;?>images/top-jeans-pic.png" width="61" height="44" /></div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="unique-apps">
+                                <h2>UNIQUE-TECH<br>APP DEVELOPMENT </h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. 
+                                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit. 
+                                </p>
 
-<div id="top">
-<?php
-if(!isset($_SESSION['Mobile_User_ID']))
-{
-?>
-<div class="login-top">
-  <div id="topnav" class="topnav"><img src="<?php echo __SCRIPT_PATH;?>images/contact-top.png" style="cursor:pointer; position:relative; top:5px; right:20px " onclick="RedirectModified('<?php echo __LINK_PATH;?>pages/contact_us/')"/><a href="login" class="signin"><span>تسجيل دخول</span></a></div>
-  <fieldset id="signin_menu">
-  	<form action="<?php echo __LINK_PATH;?>userlogin/login/AJAX/Y/" method="post" name="form1" id="form1">
-      <label for="username">البريد الإلكتروني</label>
-      <input id="User_Name" name="User_Name" value="" title="username" tabindex="4" type="text"/>
-      <p>
-        <label for="password">كلمة المرور</label>
-        <input id="PW" name="PW" value="" title="password" tabindex="5" type="password"/>
-      </p>
-      <p class="remember">
-        <input name="Submit" type="submit" id="signin_submit" tabindex="6" value="تسجيل دخول"/>
-      </p>
-      <p class="forgot"> <a href="#" id="resend_password_link">نسيت كلمة السر؟</a> </p>
-      <p class="forgot"> <a href="<?php echo __LINK_PATH?>mobile_users/create_account" id="resend_password_link">أنشاء حساب مستخدم هاتف.</a> </p>
-	  <div id="pw_recovery" style=" display:none ">
-	  <p style="font-size:12px ">الـبريـد الإلكـتـرونـي</p>
-	  <p><input id="EmailPW" type="text" /></p>
-	  <p><input type="button" id="signin_submit2" value="  إرســال  "/>
-	  </p>
-	  </div>
-     
-	</form>
-  </fieldset>
-</div>
-<?php 
-}
-else 
-{
-?>
-<div class="login-top">
-  <div id="topnav" class="topnav"><img src="<?php echo __SCRIPT_PATH;?>images/contact-top.png" style="cursor:pointer; position:relative; top:5px; right:20px " onclick="RedirectModified('<?php echo __LINK_PATH;?>pages/contact_us/')"/><a href="login" class="signin"><span>أهلا بك،<?php echo $_SESSION['Mobile_User_Name'];?></span></a></div>
-  <fieldset id="signin_menu">
-  	<a href="<?php echo __LINK_PATH?>mobile_users_functions/show_account">حسابي</a>
-  	<br/>
-  	<a href="<?php echo __LINK_PATH?>mobile_users/LogOff">تسجل خروج</a>
-  </fieldset>
-</div>
-<?php 
-}
-?>
-<script src="<?php echo __SCRIPT_PATH;?>js/jquery.tipsy.js" type="text/javascript"></script>
-<script type='text/javascript'>
-    $(function() {
-	  $('#forgot_username_link').tipsy({gravity: 'w'});   
-    });
-  </script>
+                                <div class="home-btn"><button class="btn btn-primary">View More <span><i class="fa fa-paper-plane"></i></span></button></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="slider-area">
+
+                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="3000">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+
+                                    </ol>
+
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox">
+
+                                        <div class="item active">
+                                            <img src="assets/images/slider-img.png" alt="" />
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="assets/images/slider-img.png" alt="" />
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="assets/images/slider-img.png" alt="" />
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="assets/images/slider-img.png" alt="" />
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>	
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- Sections -->
+        <section id="our-portfolio" class="sections">
+            <div class="container">
+
+                <div class="row">
+                    <div class="heading">
+                        <div class="title text-center arrow-right">
+                            <h4 class="">WHAT WE DO </h4>
+                            <img class="hidden-xs" src="assets/images/right-arrow.png" alt="" />
+
+                        </div>
+                    </div>	
 
 
-<div class="menu">
-	<table style="width: 100%;">
-		<tr>
-			<td style="width:123px" valign="top">
-			<a onmouseover="document.facebook.src='<?php echo __SCRIPT_PATH;?>images/facebook-on.png'" onmouseout="document.facebook.src='<?php echo __SCRIPT_PATH;?>images/facebook-off.png'" href="http://www.facebook.com/WafferApp" target="_blank">
-			<img name="facebook" border="0" src="<?php echo __SCRIPT_PATH;?>images/facebook-off.png" width="123" height="58"/></a></td>
-			<td style="width:123px" valign="top">
-			<a onmouseover="document.twitter.src='<?php echo __SCRIPT_PATH;?>images/twitter-on.png'" onmouseout="document.twitter.src='<?php echo __SCRIPT_PATH;?>images/twitter-off.png'" href="http://www.twitter.com/WafferApp" target="_blank">
-			<img name="twitter" border="0" src="<?php echo __SCRIPT_PATH;?>images/twitter-off.png" width="123" height="58"/></a></td>
-			<td align="right" valign="middle">
-			<a onmouseover="document.NAME3.src='<?php echo __SCRIPT_PATH;?>images/a3len-on.png'" onmouseout="document.NAME3.src='<?php echo __SCRIPT_PATH;?>images/a3len-off.png'" href="<?php echo __LINK_PATH;?>pages/display_page/Member/2/">
-			<img name="NAME3" border="0" src="<?php echo __SCRIPT_PATH;?>images/a3len-off.png" width="82" height="28"/></a></td>
-			<td align="center" valign="middle" style="width:35px;"><img alt="" src="<?php echo __SCRIPT_PATH;?>images/menu-line.jpg" width="2" height="16" /></td>
-			<td align="right" valign="middle" style="width:113px;">
-			<a onmouseover="document.NAME2.src='<?php echo __SCRIPT_PATH;?>images/keef-on.png'" onmouseout="document.NAME2.src='<?php echo __SCRIPT_PATH;?>images/keef-off.png'" href="<?php echo __LINK_PATH;?>pages/display_page/Member/1/">
-			<img name="NAME2" border="0" src="<?php echo __SCRIPT_PATH;?>images/keef-off.png" width="113" height="33"/></a></td>
-			<td align="center" valign="middle" style="width:35px;"><img alt="" src="<?php echo __SCRIPT_PATH;?>images/menu-line.jpg" width="2" height="16" /></td>
-			<td align="right" valign="middle" style="width:129px;">
-			<a onmouseover="document.NAME1.src='<?php echo __SCRIPT_PATH;?>images/home-on.png'" onmouseout="document.NAME1.src='<?php echo __SCRIPT_PATH;?>images/home-off.png'" href="<?php echo __LINK_PATH;?>">
-			<img name="NAME1" border="0" src="<?php echo __SCRIPT_PATH;?>images/home-off.png" width="129" height="28"/></a></td>
-		</tr>
-	</table>
-</div>
-</div>
+                    <!-- Example row of columns -->
+
+                    <div class="portfolio-wrap">
+
+                        <div class="portfolio">
+
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img src="assets/images/monitor.png" alt="" />
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="portfolio-item">
+                                    <h4>WEB DESIGN</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est. laboru
+                                    </p>
+                                    <button class="btn pt-btn btn-primary">View More</button>
+                                </div>
+                            </div>
+
+                        </div>
 
 
-<div id="content">
-<table style="width: 100%" cellspacing="0" cellpadding="0">
-<tr>
-<td valign="top" style="width: 658px">
-<div id="header">
-<div class="slider-wrapper theme-default">
-<div class="ribbon"></div>
-<div id="slider" class="nivoSlider" style="left: 0px; top: 0px">
-<?php
-$myfunctions = new myfunctions();
-$myfunctions->display_banner();
-?>
-</div>
-</div>
- <script type="text/javascript" src="<?php echo __SCRIPT_PATH;?>js/jquery.nivo.slider.pack.js"></script>
-    <script type="text/javascript">
-    $(window).load(function() {
-        $('#slider').nivoSlider();
-    });
-    </script>
-</div>
-<div id="services-waffer">
-	<table cellspacing="0" cellpadding="0">
-		<tr>
-			<td style="padding-right:3px;"><a onmouseover="document.services4.src='<?php echo __SCRIPT_PATH;?>images/services4-on.png'" onmouseout="services4.src='<?php echo __SCRIPT_PATH;?>images/services4-off.png'" href="<?php echo __LINK_PATH;?>services/display_offer/Member/4/">
-			<img name="services4" border="0" src="<?php echo __SCRIPT_PATH;?>images/services4-off.png" width="106" height="90"/></a></td>
-			<td style="padding-right:3px;"><a onmouseover="document.services3.src='<?php echo __SCRIPT_PATH;?>images/services3-on.png'" onmouseout="services3.src='<?php echo __SCRIPT_PATH;?>images/services3-off.png'" href="<?php echo __LINK_PATH;?>services/display_offer/Member/5/">
-			<img name="services3" border="0" src="<?php echo __SCRIPT_PATH;?>images/services3-off.png" width="106" height="90"/></a></td>
-			<td style="padding-right:3px;"><a onmouseover="document.services2.src='<?php echo __SCRIPT_PATH;?>images/services2-on.png'" onmouseout="services2.src='<?php echo __SCRIPT_PATH;?>images/services2-off.png'" href="<?php echo __LINK_PATH;?>services/display_offer/Member/6/">
-			<img name="services2" border="0" src="<?php echo __SCRIPT_PATH;?>images/services2-off.png" width="106" height="90"/></a></td>
-			<td><a onmouseover="document.services1.src='<?php echo __SCRIPT_PATH;?>images/services1-on.png'" onmouseout="services1.src='<?php echo __SCRIPT_PATH;?>images/services1-off.png'" href="<?php echo __LINK_PATH;?>services/display_offer/Member/7/">
-			<img name="services1" border="0" src="<?php echo __SCRIPT_PATH;?>images/services1-off.png" width="106" height="90"/></a></td>
-		</tr>
-	</table>
-</div>
-<div id="test-all">
-<?php
-$registry->router->loader();
-?>
 
-<div class="text-bottom">
-<img alt="" src="<?php echo __SCRIPT_PATH;?>images/text-bottom.png" width="614" height="9" /></div>
-</div>
-</td>
-<td valign="top" style="width: 288px">
+                        <div class="portfolio">
+
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="portfolio-item">
+                                    <h4>SEARCH ENGINE OPTIMIZATION</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est. laboru
+                                    </p>
+                                    <button class="btn pt-btn btn-primary">View More</button>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img class="portfolio-img img-responsive" src="assets/images/monitor.png" alt="" />
+                            </div>
+
+                        </div>
 
 
-<div id="right-menu">
-<div id="menu-title"><img alt="" src="<?php echo __SCRIPT_PATH;?>images/fe2at-waffer.png" width="137" height="36" /></div>
-<div id="menu-middle">
-	<table style="width: 100%" cellspacing="0" cellpadding="0">
-		<tr>
-			<td valign="top" style="width: 86px">
-			<a onmouseover="document.icon1.src='<?php echo __SCRIPT_PATH;?>images/mta3em-on.png'" onmouseout="icon1.src='<?php echo __SCRIPT_PATH;?>images/mta3em-off.png'" href="<?php echo __LINK_PATH;?>store/display_offer/Member/3/">
-			<img name="icon1" border="0" src="<?php echo __SCRIPT_PATH;?>images/mta3em-off.png" width="80" height="72"/></a></td>
-			<td valign="top" align="center" style="width: 86px">
-			<a onmouseover="document.icon2.src='<?php echo __SCRIPT_PATH;?>images/cofe-on.png'" onmouseout="icon2.src='<?php echo __SCRIPT_PATH;?>images/cofe-off.png'" href="<?php echo __LINK_PATH;?>store/display_offer/Member/8/">
-			<img name="icon2" border="0" src="<?php echo __SCRIPT_PATH;?>images/cofe-off.png" width="80" height="72"/></a></td>
-			<td valign="top" align="left">
-			<a onmouseover="document.icon3.src='<?php echo __SCRIPT_PATH;?>images/sport-on.png'" onmouseout="icon3.src='<?php echo __SCRIPT_PATH;?>images/sport-off.png'" href="<?php echo __LINK_PATH;?>store/display_offer/Member/15/">
-			<img name="icon3" border="0" src="<?php echo __SCRIPT_PATH;?>images/sport-off.png" width="80" height="72"/></a></td>
-		</tr>
-		<tr>
-			<td valign="top" style="width: 86px; padding-top:14px;">
-			<a onmouseover="document.icon4.src='<?php echo __SCRIPT_PATH;?>images/game-on.png'" onmouseout="icon4.src='<?php echo __SCRIPT_PATH;?>images/game-off.png'" href="<?php echo __LINK_PATH;?>store/display_offer/Member/16/">
-			<img name="icon4" border="0" src="<?php echo __SCRIPT_PATH;?>images/game-off.png" width="80" height="72"/></a>
-			</td>
-			<td valign="top" align="center" style="width: 86px; padding-top:14px;">
-			<a onmouseover="document.icon5.src='<?php echo __SCRIPT_PATH;?>images/daily-on.png'" onmouseout="icon5.src='<?php echo __SCRIPT_PATH;?>images/daily-off.png'" href="<?php echo __LINK_PATH;?>store/display_offer/Member/10/">
-			<img name="icon5" border="0" src="<?php echo __SCRIPT_PATH;?>images/daily-off.png" width="80" height="72"/></a>
-			</td>
-			<td valign="top" align="left" style="padding-top:14px;">
-			<a onmouseover="document.icon6.src='<?php echo __SCRIPT_PATH;?>images/electronic-on.png'" onmouseout="icon6.src='<?php echo __SCRIPT_PATH;?>images/electronic-off.png'" href="<?php echo __LINK_PATH;?>store/display_offer/Member/9/">
-			<img name="icon6" border="0" src="<?php echo __SCRIPT_PATH;?>images/electronic-off.png" width="80" height="72"/></a>
-			</td>
-		</tr>
-		<tr>
-			<td valign="top" style="width: 86px; padding-top:14px;">
-			<a onmouseover="document.icon7.src='<?php echo __SCRIPT_PATH;?>images/gifts-on.png'" onmouseout="icon7.src='<?php echo __SCRIPT_PATH;?>images/gifts-off.png'" href="<?php echo __LINK_PATH;?>store/display_offer/Member/17/">
-			<img name="icon7" border="0" src="<?php echo __SCRIPT_PATH;?>images/gifts-off.png" width="80" height="72"/></a>
-			</td>
-			<td valign="top" align="center" style="width: 86px; padding-top:14px;">
-			<a onmouseover="document.icon8.src='<?php echo __SCRIPT_PATH;?>images/clouth-on.png'" onmouseout="icon8.src='<?php echo __SCRIPT_PATH;?>images/clouth-off.png'" href="<?php echo __LINK_PATH;?>store/display_offer/Member/13/">
-			<img name="icon8" border="0" src="<?php echo __SCRIPT_PATH;?>images/clouth-off.png" width="80" height="72"/></a>
-			</td>
-			<td valign="top" align="left" style="padding-top:14px;">
-			<a onmouseover="document.icon9.src='<?php echo __SCRIPT_PATH;?>images/travel-on.png'" onmouseout="icon9.src='<?php echo __SCRIPT_PATH;?>images/travel-off.png'" href="<?php echo __LINK_PATH;?>store/display_offer/Member/11/">
-			<img name="icon9" border="0" src="<?php echo __SCRIPT_PATH;?>images/travel-off.png" width="80" height="72"/></a>
-			</td>
-		</tr>
-		<tr>
-			<td valign="top" style="width: 86px; padding-top:14px;">
-			<a onmouseover="document.icon10.src='<?php echo __SCRIPT_PATH;?>images/umrah-on.png'" onmouseout="icon10.src='<?php echo __SCRIPT_PATH;?>images/umrah-off.png'" href="<?php echo __LINK_PATH;?>store/display_offer/Member/12/">
-			<img name="icon10" border="0" src="<?php echo __SCRIPT_PATH;?>images/umrah-off.png" width="80" height="72"/></a>
-			</td>
-			<td valign="top" align="center" style="width: 86px; padding-top:14px;">
-			<a onmouseover="document.icon11.src='<?php echo __SCRIPT_PATH;?>images/furniture-on.png'" onmouseout="icon11.src='<?php echo __SCRIPT_PATH;?>images/furniture-off.png'" href="<?php echo __LINK_PATH;?>store/display_offer/Member/18/">
-			<img name="icon11" border="0" src="<?php echo __SCRIPT_PATH;?>images/furniture-off.png" width="80" height="72"/></a>
-			</td>
-			<td valign="top" align="left" style="padding-top:14px;">
-			<a onmouseover="document.icon12.src='<?php echo __SCRIPT_PATH;?>images/shop-on.png'" onmouseout="icon12.src='<?php echo __SCRIPT_PATH;?>images/shop-off.png'" href="<?php echo __LINK_PATH;?>store/display_offer/Member/14/">
-			<img name="icon12" border="0" src="<?php echo __SCRIPT_PATH;?>images/shop-off.png" width="80" height="72"/></a>
-			</td>
-		</tr>
-	</table>
-</div>
-<div class="menu-bottom"><img alt="" src="<?php echo __SCRIPT_PATH;?>images/right-menu-bottom.png" width="297" height="9" /></div>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
 
-<div class="footer-all">
-<div class="footer-jeans">
-<center>
-<div id="footer-content" style="height: 100%">
-	<table cellspacing="0" cellpadding="0" style="float:right; margin-bottom:12px;">
-		<tr>
-			<td style="width:150px">
-			<div class="footer-titles"><img alt="" src="<?php echo __SCRIPT_PATH;?>images/menu-1.png" width="77" height="21" /></div>
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-			<a href="<?php echo __LINK_PATH;?>" class="footer">الصفحة الرئيسية</a> <br/>
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-<a href="<?php echo __LINK_PATH;?>pages/display_page/Member/1/" class="footer">كيف يعمل وفر %</a><br/>
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-<a href="<?php echo __LINK_PATH;?>pages/display_page/Member/2/" class="footer">أعلن معنا</a><br/>
-			
-			</td>
-			<td style="width:150px">
-			<div class="footer-titles">
-				<img alt="" src="<?php echo __SCRIPT_PATH;?>images/menu-2.png" width="85" height="21" /></div>
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-<a href="<?php echo __LINK_PATH;?>services/display_offer/Member/7/" class="footer">عروض </a><br/>
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-<a href="<?php echo __LINK_PATH;?>services/display_offer/Member/6/" class="footer">وصل حديثا</a><br/>
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-<a href="<?php echo __LINK_PATH;?>services/display_offer/Member/5/" class="footer">تنزيلات</a><br/>
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-<a href="<?php echo __LINK_PATH;?>services/display_offer/Member/4/" class="footer">بطاقات خصم</a><br/>
-
-			</td>
-			<td style="width:110px">
-			<div class="footer-titles">
-				<img alt="" src="<?php echo __SCRIPT_PATH;?>images/menu-3.png" width="72" height="21" /></div>
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-<a href="<?php echo __LINK_PATH;?>store/display_offer/Member/3/" class="footer">مطاعم </a><br/>
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-<a href="<?php echo __LINK_PATH;?>store/display_offer/Member/8/" class="footer">كوفي شوب</a><br/>
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-<a href="<?php echo __LINK_PATH;?>store/display_offer/Member/15/" class="footer">نوادي رياضية</a><br/>
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-<a href="<?php echo __LINK_PATH;?>store/display_offer/Member/16/" class="footer">مراكز تسلية</a><br/>
-			</td>
-			<td style="width:120px; padding-top:25px;">
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-<a href="<?php echo __LINK_PATH;?>store/display_offer/Member/10/" class="footer">مشتريات يومية </a><br/>
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-<a href="<?php echo __LINK_PATH;?>store/display_offer/Member/9/" class="footer">الكترونيات</a><br/>
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-<a href="<?php echo __LINK_PATH;?>store/display_offer/Member/17/" class="footer">هدايا وألعاب</a><br/>
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-<a href="<?php echo __LINK_PATH;?>store/display_offer/Member/13/" class="footer">ملابس</a><br/>
-			</td>
-<td style="width:120px; padding-top:25px;">
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-<a href="<?php echo __LINK_PATH;?>store/display_offer/Member/11/" class="footer">سياحة وسفر </a><br/>
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-<a href="<?php echo __LINK_PATH;?>store/display_offer/Member/12/" class="footer">حج وعمرة</a><br/>
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-<a href="<?php echo __LINK_PATH;?>store/display_offer/Member/18/" class="footer">مفروشات</a><br/>
-			<img alt="" src="<?php echo __SCRIPT_PATH;?>images/arrow-footer.png" width="3" height="10" />&nbsp;
-<a href="<?php echo __LINK_PATH;?>store/display_offer/Member/14/" class="footer">اكسسوارات وتجميل</a><br/>
-			</td>
-
-			<td style="width:230px; padding-left:10px; padding-top:75px" align="left" valign="bottom">
-					</tr>
-	</table>
-	
-<div id="softile">Copyright © 2012 <a href="#z" class="soft">wafferapp.com</a> , All rights reserved.Powered By :
- </div>
-</div>
-</center>
-</div>
-</div>
+                        <div class="portfolio">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img class="portfolio-img img-responsive" src="assets/images/monitor.png" alt="" />
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="portfolio-item">
+                                    <h4>AFFILIATE MARKETING</h4>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est. laboru
+                                    </p>
+                                    <button class="btn pt-btn btn-primary">View More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
-</div>
-</body>
+            <!-- /container -->       
+        </section>
+
+        <section id="works-area" class="sections">
+            <div class="container text-center">
+
+                <div class="heading">
+                    <div class="title text-center arrow-left">
+                        <img class="hidden-xs" src="assets/images/left-arrow.png" alt="" />
+
+                        <h4 class="">HOW WE WORKS </h4>
+                    </div>
+                </div>	
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="main-works">
+                            <img src="assets/images/map.png" alt="" />
+                        </div>
+                    </div>
+                </div>	
+            </div>
+        </section>
+
+        <section id="our-feature" class="sections">
+            <div class="container">
+                <div class="heading">
+                    <div class="title text-center arrow-left">
+                        <img class="hidden-xs" src="assets/images/left-arrow.png" alt="" />
+
+                        <h4 class="">Our Features</h4>
+                    </div>
+                </div>
+
+                <div class="feature-wrapper">
+                    <div class="row">
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content active"> 
+                                <h4><i class="fa fa-database"></i><span>Visual Composer</span></h4>
+                                <p>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>Responsive</span></h4>
+                                <p>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>Retina Ready</span></h4>
+                                <p>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>Retina Ready</span></h4>
+                                <p>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>Retina Ready</span></h4>
+                                <p>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>Retina Ready</span></h4>
+                                <p>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>Retina Ready</span></h4>
+                                <p>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>Retina Ready</span></h4>
+                                <p>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>Retina Ready</span></h4>
+                                <p>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>Retina Ready</span></h4>
+                                <p>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>Retina Ready</span></h4>
+                                <p>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="features-content"> 
+                                <h4><i class="fa fa-database"></i><span>Retina Ready</span></h4>
+                                <p>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla</p>
+                            </div>
+                        </div>
+                    </div>	
+                </div>		
+
+
+            </div>
+
+
+        </section>
+
+        <section id="our-package" class="sections lightbg">
+            <div class="container">
+
+                <div class="heading">
+                    <div class="title text-center arrow-left">
+                        <img class="hidden-xs" src="assets/images/left-arrow.png" alt="" />
+
+                        <h4 class="">Our Packages</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+
+
+                    <div class="main-package text-center">
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="package-item basic">
+
+                                <h5>Basic</h5>
+
+                                <ul>
+                                    <li>5 web sites</li>
+                                    <li>5 e-mails</li>
+                                    <li>5 MySQL databases</li>
+                                    <li>5 MySQL databases</li>
+                                    <li>10 GB storage</li>
+                                </ul>
+
+                                <div class="package-bottom-area">
+                                    <h3>$5/<span>mo.</span></h3>
+                                </div>
+
+                                <div class="pkg-btn"><a href="" class="btn btn-primary">ORDER NOW</a></div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="package-item standard">
+
+                                <h5>Standard</h5>
+
+                                <ul>
+                                    <li>5 web sites</li>
+                                    <li>5 e-mails</li>
+                                    <li>5 MySQL databases</li>
+                                    <li>5 MySQL databases</li>
+                                    <li>10 GB storage</li>
+                                </ul>
+
+                                <div class="package-bottom-area">
+                                    <h3>$12<span>/mo.</span></h3>
+                                </div>
+
+                                <div class="pkg-btn"><a href="" class="btn btn-primary">ORDER NOW</a></div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="package-item premium">
+
+                                <h5>Premium</h5>
+
+                                <ul>
+                                    <li>5 web sites</li>
+                                    <li>5 e-mails</li>
+                                    <li>5 MySQL databases</li>
+                                    <li>5 MySQL databases</li>
+                                    <li>10 GB storage</li>
+                                </ul>
+
+                                <div class="package-bottom-area">
+                                    <h3>$19<span>/mo.</span></h3>
+                                </div>
+
+                                <div class="pkg-btn"><a href="" class="btn btn-primary">ORDER NOW</a></div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>	
+        </section>
+
+        <section id="our-history" class="sections">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="main-history">
+
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="history-img">
+                                <img src="assets/images/history-img.png" alt="" />
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="history-wrapper">
+                                <div class="history-heading"> 
+                                    <h5 class="our-history">Our History</h5>
+                                </div>
+
+                                <div class="history-content">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est. laboru
+                                    </p>
+
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                                        consequat.
+                                    </p>
+
+                                    <div class="hst-btn"><button class="btn btn-primary">BROWSE OUR HISTORY</button></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="our-project" class="sections">
+            <div class="container">
+
+                <div class="heading">
+                    <div class="title text-center arrow-left">
+
+                        <h4 class="">Our Business Project</h4>
+                        <img class="hidden-xs" src="assets/images/right-arrow.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="row">
+
+
+                    <div class="main-project text-center">
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="project-item">
+                                <div class="project-photo"><img src="assets/images/projects/1.png" alt="" /></div>
+                                <h5>TECHNICAL AID</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="project-item">
+                                <div class="project-photo"><img src="assets/images/projects/2.png" alt="" /></div>
+                                <h5>SECURE ACCESS</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="project-item">
+                                <div class="project-photo"><img src="assets/images/projects/3.png" alt="" /></div>
+                                <h5>MARKET RESERCH</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="project-item">
+                                <div class="project-photo"><img src="assets/images/projects/4.png" alt="" /></div>
+                                <h5>CREDIT RESERCH</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="project-item">
+                                <div class="project-photo"><img src="assets/images/projects/5.png" alt="" /></div>
+                                <h5>TECHNICAL AID</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="project-item">
+                                <div class="project-photo"><img src="assets/images/projects/6.png" alt="" /></div>
+                                <h5>TECHNICAL AID</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="project-item">
+                                <div class="project-photo"><img src="assets/images/projects/7.png" alt="" /></div>
+                                <h5>TECHNICAL AID</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="project-item">
+                                <div class="project-photo"><img src="assets/images/projects/8.png" alt="" /></div>
+                                <h5>TECHNICAL AID</h5>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="our-team" class="sections">
+            <div class="container">
+
+                <div class="heading">
+                    <div class="title text-center arrow-left">
+                        <img class="hidden-xs" src="assets/images/left-arrow.png" alt="" />
+
+                        <h4 class="">Our Team Members</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid project-bg">
+                <div class="row">
+
+                    <div class="main-team text-center">
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="team-member">
+
+                                <img class="img-circle" src="assets/images/team/1.png" alt="" />
+                                <h5>SAYED MIRAJ</h5>
+                                <p>UI & UX DESIGNER</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="team-member">
+                                <img class="img-circle" src="assets/images/team/2.png" alt="" />
+                                <h5>PENNY HUSTON</h5>
+                                <p>DEVELOPER</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="team-member">
+                                <img class="img-circle" src="assets/images/team/3.png" alt="" />
+                                <h5>LENNERD SHELLY</h5>
+                                <p>REVIEWER</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="team-member">
+                                <img class="img-circle" src="assets/images/team/4.png" alt="" />
+                                <h5>SHELDON CUPPER</h5>
+                                <p>MARKETTER</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="our-supports" class="sections">
+            <div class="container">
+
+                <div class="heading">
+                    <div class="title text-center arrow-left">
+
+                        <h4 class="">Updates & Support</h4>
+                        <img class="hidden-xs" src="assets/images/right-arrow.png" alt="" />
+                    </div>
+                </div>
+
+                <!-- Example row of columns -->
+                <div class="row">
+
+
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="supports-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est. laboru
+                            </p>
+                            <div class="spt-btn"><button class="btn btn-primary">SUPPORT CENTER</button></div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="supports-img"><img class="img-responsive" src="assets/images/monitor.png" alt="" /></div>
+                    </div>
+
+
+                </div>
+
+            </div> <!-- /container -->       
+        </section>
+
+        <section id="hire-us" class="sections">
+
+            <div class="container">
+
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="hire-content">
+                            <div class="img-overlay">
+
+                                <div class="creative-works">
+                                    <h3>NEED CREATIVE WORKERS?</h3>
+                                    <button class="btn hire-btn btn-primary">HIRE US</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div> <!-- /container -->  
+
+        </section>
+
+        <div class="scroll-top">
+
+            <div class="scrollup">
+                <i class="fa fa-angle-double-up"></i>
+            </div>
+
+        </div>
+
+        <!--Footer-->
+        <footer id="footer" class="footer">
+            <div class="container">
+
+                <div class="row">
+                    <div class="main-footer">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-item">
+                                <h2>PORTFOLIO</h2>
+                                <ul>
+                                    <li><a href="#">Web Design</a></li>
+                                    <li><a href="#">Brand & Identity</a></li>
+                                    <li><a href="#">Mobile Design</a></li>
+                                    <li><a href="#">Print</a></li>
+                                    <li><a href="#">User Interface</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-item">
+                                <h2>ABOUT</h2>
+                                <ul>
+                                    <li><a href="#">The Company</a></li>
+                                    <li><a href="#">History</a></li>
+                                    <li><a href="#">Vision</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-item">
+                                <h2>GALLERY</h2>
+                                <ul>
+                                    <li><a href="#">lickr</a></li>
+                                    <li><a href="#">Picasa</a></li>
+                                    <li><a href="#">iStockPhoto</a></li>
+                                    <li><a href="#">PhotoDune</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-item">
+                                <h2>CONTACT</h2>
+                                <ul>
+                                    <li><a href="#">Basic Info</a></li>
+                                    <li><a href="#">Map</a></li>
+                                    <li><a href="#">Conctact Form</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="socio-copyright">
+
+                        <div class="social">
+                            <a target="_blank" href="#"><i class="fa fa-facebook"></i></a>
+                            <a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+                            <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a>
+                            <a target="_blank" href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+
+                        <p>Made with <i class="fa fa-heart"></i> by <a target="_blank" href="http://bootstrapthemes.co"> Bootstrap Themes </a>2016. All rights reserved.</p>
+                    </div>
+
+                </div>	
+            </div>
+
+        </footer>
+
+
+        <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
