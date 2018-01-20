@@ -43,7 +43,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index.html"><img src="<?php echo __SCRIPT_PATH;?>assets/images/logo.png" alt="" /></a>
+                        <a class="navbar-brand" href="#"><img src="<?php echo __SCRIPT_PATH;?>assets/images/logo.png" alt="" style="height: 100px"/>WafferApp</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
