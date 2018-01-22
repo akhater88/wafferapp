@@ -106,7 +106,8 @@ class verify_login
 									<script language="javascript">
 									window.location = '<?php echo $URL;?>';
 									</script>
-									<?
+									<?php
+									
 							}
 						else
 							{
@@ -115,7 +116,7 @@ class verify_login
 								<script language="javascript">
 								window.location = '<?php echo __LINK_PATH;?>index/s/';
 								</script>
-								<?
+								<?php
 							}
 					}
 				else
@@ -125,7 +126,7 @@ class verify_login
 						<script language="javascript">
 						window.location = '<?php echo __LINK_PATH;?>index/s/';
 						</script>
-						<?
+						<?php
 					}
 			}
 		

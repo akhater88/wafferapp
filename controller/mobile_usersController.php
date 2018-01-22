@@ -152,7 +152,7 @@ class mobile_usersController extends baseController {
 		<script language="javascript">
 		window.location = '<?php echo __LINK_PATH;?>';
 		</script>
-		<?
+		<?php
 	}
 }
 

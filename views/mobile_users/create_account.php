@@ -69,35 +69,35 @@ $Time_Stamp = date('m_d_Y').time();
 </script>
 <div id="Message" style="color:#009900 "></div>
 <div style="line-height:15px ">&nbsp;</div>
-<form action="<?php echo __LINK_PATH;?>mobile_users/log_in" method="post" name="form1" id="form1">
+<form action="<?php echo __LINK_PATH;?>mobile_users/log_in" method="post" name="form_reg" id="form_reg">
 <table width="100%"  border="0" cellpadding="5">
    <tr>
-     <td width="17%">الاسم</td>
+     <td width="17%">Name</td>
       <td width="83%"><input name="name" type="text" id="name" size="40">
       </td>
     
   </tr>
   <tr>
-   <td width="17%">الـبـريـد الإلـكـتـرونــي</td>
+   <td width="17%">Email</td>
       <td width="83%"><input name="Email" type="text" id="Email" size="40">
       </td>
      
   </tr>
   <tr>
-   <td>كـلـمــة الـسـر</td>
+   <td>Password</td>
     <td><input name="PW1" type="password" id="PW1" size="40">
     </td>
    
   </tr>
    <tr>
-   <td>تـأكـيـد كـلـمــة الـســر</td>
+   <td>Confirm Password</td>
     <td><input name="PW2" type="password" id="PW2" size="40">
     </td>
     
   </tr>
   <tr>
   <td>&nbsp;</td>
-    <td><input type="button" name="Button" value="    إرســال    " class="Submit_BTN"></td>
+    <td><input type="button" name="Button" value="    Register    " class="Submit_BTN"></td>
     
   </tr>
 

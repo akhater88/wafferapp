@@ -23,7 +23,7 @@ class validate_mobile_user_role {
 						<script language="javascript">
 						window.location = '<?php echo __LINK_PATH;?>mobile_users/mobile_user_account';
 						</script>
-						<?
+						<?php
 						}
 				}
 			else
@@ -32,7 +32,7 @@ class validate_mobile_user_role {
 					<script language="javascript">
 					window.location = '<?php echo __LINK_PATH;?>mobile_users/mobile_user_account';
 					</script>
-					<?
+					<?php
 				}
 		}
 }

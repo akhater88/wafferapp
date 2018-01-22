@@ -4,6 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
+$Page_Title = 'Home Page';
 switch($Content_Title)
 	{
 		case 'statistics':

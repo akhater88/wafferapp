@@ -768,7 +768,7 @@ public function expired_member()
 					<div><?php echo $_SESSION['Expiration_Date'];?></div>
 					<div>الــرجــاء تـجـديـد الإشـتـراك</div>
 					</div>
-					<?
+					<?php
 					}
 			}
 	}

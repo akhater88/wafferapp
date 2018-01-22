@@ -25,7 +25,7 @@ class validate_roles_new {
 						<script language="javascript">
 						window.location = '<?php echo __LINK_PATH;?>index/expired_member/';
 						</script>
-						<?
+						<?php
 						}
 					else
 						{
@@ -38,9 +38,9 @@ class validate_roles_new {
 								{
 									?>
 									<script language="javascript">
-									window.location = 'http://www.wafferapp.com';
+									window.location = '<?php echo __LINK_PATH;?>';
 									</script>
-									<?
+									<?php
 								}
 						}
 				}
@@ -55,9 +55,9 @@ class validate_roles_new {
 						{
 							?>
 							<script language="javascript">
-							window.location = 'http://www.wafferapp.com';
+							window.location = '<?php echo __LINK_PATH;?>';
 							</script>
-							<?
+							<?php
 						}
 				}
 		}

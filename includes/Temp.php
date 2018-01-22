@@ -27,6 +27,7 @@
         <link rel="stylesheet" href="<?php echo __SCRIPT_PATH;?>assets/css/responsive.css" />
 
         <script src="<?php echo __SCRIPT_PATH;?>assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="<?php echo __SCRIPT_PATH;?>assets/js/vendor/jquery-1.11.2.min.js"></script>
     </head>
     <body data-spy="scroll" data-target="#main-navbar">
         <!--[if lt IE 8]>
@@ -104,10 +105,10 @@
                             } else {
                             ?>
                              <li>
-                             	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome User1 <b class="caret"></b></a>
+                             	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome <?php echo $_SESSION['Mobile_User_Name'];?> <b class="caret"></b></a>
                              	<ul class="dropdown-menu multi-level">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="<?php echo __LINK_PATH?>mobile_users_functions/show_account">Account</a></li>
+                                    <li><a href="#">My Vouchers</a></li>
                                 </ul>
                              </li>
                             
@@ -180,7 +181,21 @@
             </div>
 
         </header>
+		<section id="our-package" class="sections lightbg">
+            <div class="container">
 
+                <div class="heading">
+                    <div class="title text-center arrow-left">
+                        <img class="hidden-xs" src="assets/images/left-arrow.png" alt="" />
+
+                        <h4 class="">Our Packages</h4>
+                    </div>
+                </div>
+    			<?php
+                $registry->router->loader();
+            ?>
+            </div>	
+        </section>
         <!-- Sections -->
         <section id="our-portfolio" class="sections">
             <div class="container">
@@ -308,7 +323,7 @@
 
 
         </section>
-
+        
         <section id="our-package" class="sections lightbg">
             <div class="container">
 
@@ -558,7 +573,7 @@
         </footer>
 
 
-        <script src="<?php echo __SCRIPT_PATH;?>assets/js/vendor/jquery-1.11.2.min.js"></script>
+        
         <script src="<?php echo __SCRIPT_PATH;?>assets/js/vendor/bootstrap.min.js"></script>
 
         <script src="<?php echo __SCRIPT_PATH;?>assets/js/plugins.js"></script>

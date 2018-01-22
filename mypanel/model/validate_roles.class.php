@@ -16,7 +16,7 @@ class validate_roles {
 					<script language="javascript">
 					window.location = '<?php echo __LINK_PATH;?>index/';
 					</script>
-					<?
+					<?php
 				}
 		}
 }
