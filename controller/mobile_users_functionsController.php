@@ -1,6 +1,6 @@
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
-//validate_mobile_user_role::validate();
+validate_mobile_user_role::validate();
 class mobile_users_functionsController extends baseController {
 			
 		public function index() 

@@ -71,7 +71,7 @@ class verify_login
 										$_SESSION['User_ID'] = $this->get_user_id($user_name,$user_password);
 										$_SESSION['User_Name_Session'] = $First_Name.' '.$Last_Name;
 										$_SESSION['User_level_Session'] =  $rows->Level;
-										//$_SESSION['Location_Indicator'] = __LINK_PATH;
+									    $_SESSION['Location_Indicator'] = __LINK_PATH;
 										switch($rows->Level)
 											{
 												case '1':

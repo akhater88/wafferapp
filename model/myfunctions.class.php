@@ -42,13 +42,13 @@ class myfunctions
 					break;
 				}
 				?>
-				<ul class="tab-nav">
-			       <li class="menu1" <?php echo $menu1?>  style="text-align:center"><a href="<?php echo __LINK_PATH;?>mobile_users_functions/show_account" class="menu-link">الرئيسية</a></li>
-			       <li class="menu2" <?php echo $menu2?>  style="text-align:center"><a href="<?php echo __LINK_PATH;?>mobile_users_functions/invite_friends" class="menu-link">دعوة أصدقاء</a></li>
-			       <li class="menu3" <?php echo $menu3?>  style="text-align:center"><a href="<?php echo __LINK_PATH;?>mobile_users_functions/show_prizes" class="menu-link">طلب جوائز</a></li>
-			       <li class="menu4" <?php echo $menu4?>  style="text-align:center"><a href="<?php echo __LINK_PATH;?>mobile_users_functions/show_arrived_prizes" class="menu-link">جوائز مستلمة</a></li>
-			       <li class="menu5" <?php echo $menu5?>  style="text-align:center"><a href="<?php echo __LINK_PATH;?>mobile_users_functions/edit_pw" class="menu-link">تغيير كلمة السر</a></li>
-			       <li class="menu6" style="text-align:center"><a href="<?php echo __LINK_PATH;?>mobile_users/LogOff" class="menu-link">خروج</a></li>
+				 <ul class="nav navbar-nav navbar-right">
+                   <li class="menu1" <?php echo $menu1?>  style="text-align:center"><a href="<?php echo __LINK_PATH;?>mobile_users_functions/show_account" class="menu-link">Home</a></li>
+			       <li class="menu2" <?php echo $menu2?>  style="text-align:center"><a href="<?php echo __LINK_PATH;?>mobile_users_functions/invite_friends" class="menu-link">Invite Friend</a></li>
+			       <li class="menu3" <?php echo $menu3?>  style="text-align:center"><a href="<?php echo __LINK_PATH;?>mobile_users_functions/show_prizes" class="menu-link">Order Prize</a></li>
+			       <li class="menu4" <?php echo $menu4?>  style="text-align:center"><a href="<?php echo __LINK_PATH;?>mobile_users_functions/show_arrived_prizes" class="menu-link">Clieamed Prizes</a></li>
+			       <li class="menu5" <?php echo $menu5?>  style="text-align:center"><a href="<?php echo __LINK_PATH;?>mobile_users_functions/edit_pw" class="menu-link">Change Password</a></li>
+			       <li class="menu6" style="text-align:center"><a href="<?php echo __LINK_PATH;?>mobile_users/LogOff" class="menu-link">Logout</a></li>
 			     </ul>
 				<?php
 				
@@ -101,7 +101,7 @@ class myfunctions
 			}
 		public function Is_Laget()
 			{
-				if((isset($_SESSION['Location_Indicator'])) && ($_SESSION['Location_Indicator'] == __LINK_PATH))
+			    if((isset($_SESSION['Location_Indicator'])))
 					{
 						return true;
 					}

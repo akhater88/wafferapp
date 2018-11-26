@@ -101,7 +101,6 @@ class mobile_usersController extends baseController {
 							$Display->Write_JSON($Time_Stamp,$myTweets);
 							$create_member = new create_mobile_member();
 							$Salt = $create_member->getPasswordSalt();
-							$PW = rand()*1000000;
 							$Enc_PW = $create_member->getPasswordHash($Salt,$PW);
 							$sql = 'UPDATE mobile_users SET Name = ?,PW = ?, Salt = ? WHERE Email = ?';
 							$Execute_Array = array($name,$Enc_PW,$Salt,$Email);
@@ -113,7 +112,7 @@ class mobile_usersController extends baseController {
 							$Body .= 'Your password is: '.$PW.'<BR />';
 							$Body .= '</div>';
 							$my_mail = new my_mail();
-							$my_mail->Send_SMTP($Body,'mail.softiletest.com','test1@softiletest.com','159753ash0','test1@softiletest.com','Waffer','Login Information',$Email,'Subscriber');
+							$my_mail->Send_SMTP($Body,'mail.wafferapp.com','info@wafferapp.com','xdqh96Tq','info@wafferapp.com','Waffer','Login Information',$Email,'Subscriber');
 						}
 					}
 				else
@@ -136,7 +135,7 @@ class mobile_usersController extends baseController {
 						$Body .= '<a href="'.$Link.'" target="_blank">Account Activation</a>'.'<BR />';
 						$Body .= '</div>';
 						$my_mail = new my_mail();
-						$my_mail->Send_SMTP($Body,'mail.softiletest.com','test1@softiletest.com','159753ash0','test1@softiletest.com','Admin','Subscription',$Email,'Subscriber');
+						$my_mail->Send_SMTP($Body,'mail.wafferapp.com','info@wafferapp.com','xdqh96Tq','info@wafferapp.com','Waffer','Login Information',$Email,'Subscriber');
 					}
 			}
 	function LogOff()

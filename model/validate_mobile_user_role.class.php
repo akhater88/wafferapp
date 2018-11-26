@@ -9,7 +9,8 @@ class validate_mobile_user_role {
 			
 			if($My_Mobile_User_Auth)
 				{
-					
+				    
+				    
 					$myfunctions = new myfunctions();
 					$Is_Laget = $myfunctions->Is_Laget();
 					if(!$Is_Laget)
